@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header with YouTube Logo Only */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .youtube-logo {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
+  }
+  
+  .analytics-text {
+  font-size: 50px;
+  font-weight: 500;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 4px;
+}
+  
+  .controls {
+    display: flex;
+    gap: 10px;
+  }
+  
+  select, button {
+    padding: 8px 12px;
+    background: #272727;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #3d3d3d;
+  }
+  
+  /* Summary Cards */
+  .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background: #272727;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 5px;
+  }
+  
+  .card .value {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .trend {
+    font-size: 14px;
+  }
+  
+  .trend.up {
+    color: #3aa856;
+  }
+  
+  .trend.down {
+    color: #ff4e45;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 8px 16px;
+    background: #272727;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab:hover {
+    background: #3d3d3d;
+  }
+  
+  .tab.active {
+    background: #ff0000;
+    font-weight: 500;
+  }
+  
+  .tab.profit {
+    background: #3aa856;
+  }
+  
+  /* Charts */
+  .chart-container {
+    background: #272727;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #profitSection {
+    border-left: 4px solid #3aa856;
+  }
+  
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .summary-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .summary-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .controls {
+      flex-wrap: wrap;
+    }
+    
+    .tabs {
+      flex-wrap: wrap;
+    }
+  }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Channel Analytics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" 
+               alt="YouTube" 
+               class="youtube-logo">
+          <span class="analytics-text"> <P><b>YouTube</b></span>
+        </div>
+        <div class="controls">
+          <select id="date-range">
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+            <option>Custom Range</option>
+          </select>
+          <button id="compare-btn">Compare</button>
+          <button id="export-btn">Export Data</button>
+        </div>
+      </header>
+
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+      <div class="card">
+        <h3>Subscribers</h3>
+        <p class="value">245K <span class="trend up">↑ 12%</span></p>
+      </div>
+      <div class="card">
+        <h3>Views</h3>
+        <p class="value">1.2M <span class="trend up">↑ 8%</span></p>
+      </div>
+      <div class="card">
+        <h3>Watch Time</h3>
+        <p class="value">45K hours <span class="trend down">↓ 3%</span></p>
+      </div>
+      <div class="card">
+        <h3>Revenue</h3>
+        <p class="value">$791,420 <span class="trend up">↑ 5%</span></p>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="content">Content</button>
+      <button class="tab" data-tab="audience">Audience</button>
+      <button class="tab" data-tab="engagement">Engagement</button>
+      <button class="tab" data-tab="revenue">Revenue</button>
+    </div>
+
+    <!-- Charts -->
+    <div class="chart-container">
+      <canvas id="viewsChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <canvas id="topVideosChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <canvas id="trafficSourcesChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
